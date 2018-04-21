@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="onAddNewLock()">
+          <ion-icon name="add"></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <h1 margin-top text-center >Welcome Back</h1>
+    <h3 class="hash" text-center border>public hash</h3>
+    <ion-grid>
+      <ion-row>
+        <ion-col text-center>
+          <button ion-button class="btn" (click)="onUnlock()">Unlock</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <h3 text-center>Your Locks</h3>
+    <ion-buttons text-center>
+      <button ion-button text-center (click)="onLoadLocks()">Load Locks</button>
+    </ion-buttons>
+    <ion-list>
+      <button ion-item *ngFor="let lock of locks" (click)="onLoadLock(lock)">
+        <h2>{{lock.lock_name}}</h2>
+      </button>
+    </ion-list>
+</ion-content>

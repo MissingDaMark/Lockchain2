@@ -1,0 +1,27 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add a Lock</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <form [formGroup]="lockForm" (ngSubmit)="onSubmit()">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Lock Name</ion-label>
+        <ion-input type="text" formControlName="lock_name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Public Hash</ion-label>
+        <ion-input type="text" formControlName="public_hash"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Private Hash</ion-label>
+        <ion-input type="text" formControlName="private_hash"></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button type="submit" block [disabled]="!lockForm.valid">Add Lock</button>
+  </form>
+</ion-content>

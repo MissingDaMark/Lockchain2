@@ -1,0 +1,26 @@
+
+<ion-header>
+
+  <ion-navbar>
+      <ion-buttons end>
+          <button ion-button icon-only (click)="onRemoveLock()">
+            <ion-icon name="trash"></ion-icon>
+          </button>
+        </ion-buttons>
+    
+    <ion-title>{{lock.lock_name}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h2 text-center>Public Hash</h2>
+  <h3 text-center border class='hash'>{{lock.public_hash}}</h3>
+  <ion-buttons text-center>
+      <button ion-button full text-center (click)="onAddUser()">Add User</button>
+  </ion-buttons>
+  <ion-buttons text-center>
+    <button ion-button full text-center (click)="onRemoveUser()">Remove User</button>
+  </ion-buttons>
+</ion-content>
