@@ -51,7 +51,7 @@ export class HomePage {
   }
 
   onUnlock(){
-    this.nfc.addNdefListener(() => {
+    this.nfc.addNdefFormatableListener(() => {
       console.log('successfully attached ndef listener');
     }, (err) => {
       console.log('error attaching ndef listener', err);
@@ -59,8 +59,10 @@ export class HomePage {
       console.log('received ndef message. the tag contains: ', event.tag);
       console.log('decoded tag id', this.nfc.bytesToHexString(event.tag.id));
     
-      let message = this.ndef.textRecord(this.userService.uId.publich_hash, "English", "Text");
-      this.nfc.share([message]);
+      let message = this.ndef.textRecord(this.userService.uId.username, "English", "Text")
+      this.nfc.write([message])
+        .then()
+        .catch();
     });
   }
 

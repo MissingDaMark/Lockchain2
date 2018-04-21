@@ -162,7 +162,7 @@ var SigninPage = /** @class */ (function () {
     };
     SigninPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-signin',template:/*ion-inline-start:"C:\Users\markx_000\LockChain\frontend\LockChain\src\pages\signin\signin.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Login</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n    <form #f="ngForm" (ngSubmit)="onSignin(f)">\n      <ion-list>\n        <ion-item>\n          <ion-label fixed>Email</ion-label>\n          <ion-input type="email" ngModel name="email" required></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label fixed>Password</ion-label>\n          <ion-input type="password" ngModel name="password" required></ion-input>\n        </ion-item>\n      </ion-list>\n      <button ion-button block type="submit" [disabled]="!f.valid">Signin</button>\n    </form>\n  </ion-content>'/*ion-inline-end:"C:\Users\markx_000\LockChain\frontend\LockChain\src\pages\signin\signin.html"*/,
+            selector: 'page-signin',template:/*ion-inline-start:"C:\Users\markx_000\Lockchain2\LockChain\src\pages\signin\signin.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Login</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n    <form #f="ngForm" (ngSubmit)="onSignin(f)">\n      <ion-list>\n        <ion-item>\n          <ion-label fixed>Email</ion-label>\n          <ion-input type="email" ngModel name="email" required></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label fixed>Password</ion-label>\n          <ion-input type="password" ngModel name="password" required></ion-input>\n        </ion-item>\n      </ion-list>\n      <button ion-button block type="submit" [disabled]="!f.valid">Signin</button>\n    </form>\n  </ion-content>'/*ion-inline-end:"C:\Users\markx_000\Lockchain2\LockChain\src\pages\signin\signin.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
@@ -270,7 +270,7 @@ var SignupPage = /** @class */ (function () {
     };
     SignupPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-signup',template:/*ion-inline-start:"C:\Users\markx_000\LockChain\frontend\LockChain\src\pages\signup\signup.html"*/'\n<ion-header>\n  <ion-navbar>\n    <ion-title>Sign Up</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <form #f="ngForm" (ngSubmit)="onSignupSubmit(f)">\n    <ion-list>\n      <ion-item>\n        <ion-label fixed>Username</ion-label>\n        <ion-input type="username" ngModel name="username" required></ion-input>\n      </ion-item>\n        <ion-item>\n          <ion-label fixed>Email</ion-label>\n          <ion-input type="email" ngModel name="email" required></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label fixed>Password</ion-label>\n          <ion-input type="password" ngModel name="password" required [minlength]="6"></ion-input>\n        </ion-item>\n      </ion-list>\n      <button ion-button block type="submit" color="primary" [disabled]="!f.valid">Signup</button>\n  </form>\n</ion-content>\n'/*ion-inline-end:"C:\Users\markx_000\LockChain\frontend\LockChain\src\pages\signup\signup.html"*/,
+            selector: 'page-signup',template:/*ion-inline-start:"C:\Users\markx_000\Lockchain2\LockChain\src\pages\signup\signup.html"*/'\n<ion-header>\n  <ion-navbar>\n    <ion-title>Sign Up</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <form #f="ngForm" (ngSubmit)="onSignupSubmit(f)">\n    <ion-list>\n      <ion-item>\n        <ion-label fixed>Username</ion-label>\n        <ion-input type="username" ngModel name="username" required></ion-input>\n      </ion-item>\n        <ion-item>\n          <ion-label fixed>Email</ion-label>\n          <ion-input type="email" ngModel name="email" required></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label fixed>Password</ion-label>\n          <ion-input type="password" ngModel name="password" required [minlength]="6"></ion-input>\n        </ion-item>\n      </ion-list>\n      <button ion-button block type="submit" color="primary" [disabled]="!f.valid">Signup</button>\n  </form>\n</ion-content>\n'/*ion-inline-end:"C:\Users\markx_000\Lockchain2\LockChain\src\pages\signup\signup.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
@@ -378,7 +378,7 @@ var AddLockPage = /** @class */ (function () {
     };
     AddLockPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-add-lock',template:/*ion-inline-start:"C:\Users\markx_000\LockChain\frontend\LockChain\src\pages\add-lock\add-lock.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Add a Lock</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <form [formGroup]="lockForm" (ngSubmit)="onSubmit()">\n    <ion-list>\n      <ion-item>\n        <ion-label floating>Lock Name</ion-label>\n        <ion-input type="text" formControlName="lock_name"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label floating>Public Hash</ion-label>\n        <ion-input type="text" formControlName="public_hash"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label floating>Private Hash</ion-label>\n        <ion-input type="text" formControlName="private_hash"></ion-input>\n      </ion-item>\n    </ion-list>\n    <button ion-button type="submit" block [disabled]="!lockForm.valid">Add Lock</button>\n  </form>\n</ion-content>\n'/*ion-inline-end:"C:\Users\markx_000\LockChain\frontend\LockChain\src\pages\add-lock\add-lock.html"*/,
+            selector: 'page-add-lock',template:/*ion-inline-start:"C:\Users\markx_000\Lockchain2\LockChain\src\pages\add-lock\add-lock.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Add a Lock</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n  <form [formGroup]="lockForm" (ngSubmit)="onSubmit()">\n    <ion-list>\n      <ion-item>\n        <ion-label floating>Lock Name</ion-label>\n        <ion-input type="text" formControlName="lock_name"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label floating>Public Hash</ion-label>\n        <ion-input type="text" formControlName="public_hash"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label floating>Private Hash</ion-label>\n        <ion-input type="text" formControlName="private_hash"></ion-input>\n      </ion-item>\n    </ion-list>\n    <button ion-button type="submit" block [disabled]="!lockForm.valid">Add Lock</button>\n  </form>\n</ion-content>\n'/*ion-inline-end:"C:\Users\markx_000\Lockchain2\LockChain\src\pages\add-lock\add-lock.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
@@ -468,7 +468,7 @@ var AddUserPage = /** @class */ (function () {
     };
     AddUserPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-add-user',template:/*ion-inline-start:"C:\Users\markx_000\LockChain\frontend\LockChain\src\pages\add-user\add-user.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Add User</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n    <form #f="ngForm" (ngSubmit)="onAddUserSubmit(f)">\n      <ion-list>\n        <ion-item>\n          <ion-label fixed>Username</ion-label>\n          <ion-input type="username" ngModel name="username" required></ion-input>\n        </ion-item>\n      </ion-list>\n      <button ion-button block type="submit" color="primary" [disabled]="!f.valid">Signup</button>\n    </form>\n  </ion-content>\n'/*ion-inline-end:"C:\Users\markx_000\LockChain\frontend\LockChain\src\pages\add-user\add-user.html"*/,
+            selector: 'page-add-user',template:/*ion-inline-start:"C:\Users\markx_000\Lockchain2\LockChain\src\pages\add-user\add-user.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Add User</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n    <form #f="ngForm" (ngSubmit)="onAddUserSubmit(f)">\n      <ion-list>\n        <ion-item>\n          <ion-label fixed>Username</ion-label>\n          <ion-input type="username" ngModel name="username" required></ion-input>\n        </ion-item>\n      </ion-list>\n      <button ion-button block type="submit" color="primary" [disabled]="!f.valid">Signup</button>\n    </form>\n  </ion-content>\n'/*ion-inline-end:"C:\Users\markx_000\Lockchain2\LockChain\src\pages\add-user\add-user.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
@@ -570,7 +570,7 @@ var EditLockPage = /** @class */ (function () {
     };
     EditLockPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-edit-lock',template:/*ion-inline-start:"C:\Users\markx_000\LockChain\frontend\LockChain\src\pages\edit-lock\edit-lock.html"*/'\n<ion-header>\n\n  <ion-navbar>\n      <ion-buttons end>\n          <button ion-button icon-only (click)="onRemoveLock()">\n            <ion-icon name="trash"></ion-icon>\n          </button>\n        </ion-buttons>\n    \n    <ion-title>{{lock.lock_name}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <h2 text-center>Public Hash</h2>\n  <h3 text-center border class=\'hash\'>{{lock.public_hash}}</h3>\n  <ion-buttons text-center>\n      <button ion-button full text-center (click)="onAddUser()">Add User</button>\n  </ion-buttons>\n  <ion-buttons text-center>\n    <button ion-button full text-center (click)="onRemoveUser()">Remove User</button>\n  </ion-buttons>\n</ion-content>\n'/*ion-inline-end:"C:\Users\markx_000\LockChain\frontend\LockChain\src\pages\edit-lock\edit-lock.html"*/,
+            selector: 'page-edit-lock',template:/*ion-inline-start:"C:\Users\markx_000\Lockchain2\LockChain\src\pages\edit-lock\edit-lock.html"*/'\n<ion-header>\n\n  <ion-navbar>\n      <ion-buttons end>\n          <button ion-button icon-only (click)="onRemoveLock()">\n            <ion-icon name="trash"></ion-icon>\n          </button>\n        </ion-buttons>\n    \n    <ion-title>{{lock.lock_name}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <h2 text-center>Public Hash</h2>\n  <h3 text-center border class=\'hash\'>{{lock.public_hash}}</h3>\n  <ion-buttons text-center>\n      <button ion-button full text-center (click)="onAddUser()">Add User</button>\n  </ion-buttons>\n  <ion-buttons text-center>\n    <button ion-button full text-center (click)="onRemoveUser()">Remove User</button>\n  </ion-buttons>\n</ion-content>\n'/*ion-inline-end:"C:\Users\markx_000\Lockchain2\LockChain\src\pages\edit-lock\edit-lock.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
@@ -657,7 +657,7 @@ var RemoveUserPage = /** @class */ (function () {
     };
     RemoveUserPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-remove-user',template:/*ion-inline-start:"C:\Users\markx_000\LockChain\frontend\LockChain\src\pages\remove-user\remove-user.html"*/'<ion-header>\n\n    <ion-navbar>\n      <ion-title>Remove User</ion-title>\n    </ion-navbar>\n  \n  </ion-header>\n  \n  \n  <ion-content padding>\n      <form #f="ngForm" (ngSubmit)="onRemoveUserSubmit(f)">\n        <ion-list>\n          <ion-item>\n            <ion-label fixed>Username</ion-label>\n            <ion-input type="username" ngModel name="username" required></ion-input>\n          </ion-item>\n        </ion-list>\n        <button ion-button block type="submit" color="primary" [disabled]="!f.valid">Signup</button>\n      </form>\n    </ion-content>\n  '/*ion-inline-end:"C:\Users\markx_000\LockChain\frontend\LockChain\src\pages\remove-user\remove-user.html"*/,
+            selector: 'page-remove-user',template:/*ion-inline-start:"C:\Users\markx_000\Lockchain2\LockChain\src\pages\remove-user\remove-user.html"*/'<ion-header>\n\n    <ion-navbar>\n      <ion-title>Remove User</ion-title>\n    </ion-navbar>\n  \n  </ion-header>\n  \n  \n  <ion-content padding>\n      <form #f="ngForm" (ngSubmit)="onRemoveUserSubmit(f)">\n        <ion-list>\n          <ion-item>\n            <ion-label fixed>Username</ion-label>\n            <ion-input type="username" ngModel name="username" required></ion-input>\n          </ion-item>\n        </ion-list>\n        <button ion-button block type="submit" color="primary" [disabled]="!f.valid">Signup</button>\n      </form>\n    </ion-content>\n  '/*ion-inline-end:"C:\Users\markx_000\Lockchain2\LockChain\src\pages\remove-user\remove-user.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
@@ -708,7 +708,7 @@ var WelcomePage = /** @class */ (function () {
     };
     WelcomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-welcome',template:/*ion-inline-start:"C:\Users\markx_000\LockChain\frontend\LockChain\src\pages\welcome\welcome.html"*/'<ion-content id="welcome">\n  <div text-center padding>\n    <img src="assets/imgs/lock-2.png" width="180" height="180" class="marginTop"/>\n  </div>\n  <button ion-button full outline class="marginTop" (click)="onSignin()">Login</button>\n  <button ion-button full outline (click)="onSignup()">Sign up</button>\n</ion-content>\n'/*ion-inline-end:"C:\Users\markx_000\LockChain\frontend\LockChain\src\pages\welcome\welcome.html"*/,
+            selector: 'page-welcome',template:/*ion-inline-start:"C:\Users\markx_000\Lockchain2\LockChain\src\pages\welcome\welcome.html"*/'<ion-content id="welcome">\n  <div text-center padding>\n    <img src="assets/imgs/lock-2.png" width="180" height="180" class="marginTop"/>\n  </div>\n  <button ion-button full outline class="marginTop" (click)="onSignin()">Login</button>\n  <button ion-button full outline (click)="onSignup()">Sign up</button>\n</ion-content>\n'/*ion-inline-end:"C:\Users\markx_000\Lockchain2\LockChain\src\pages\welcome\welcome.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], WelcomePage);
@@ -741,23 +741,23 @@ webpackEmptyAsyncContext.id = 212;
 
 var map = {
 	"../pages/add-lock/add-lock.module": [
-		854,
+		853,
 		8
 	],
 	"../pages/add-new-lock/add-new-lock.module": [
-		853,
+		854,
 		7
 	],
 	"../pages/add-user/add-user.module": [
-		856,
+		855,
 		6
 	],
 	"../pages/edit-lock/edit-lock.module": [
-		857,
+		856,
 		5
 	],
 	"../pages/edit-permissions/edit-permissions.module": [
-		855,
+		857,
 		4
 	],
 	"../pages/remove-user/remove-user.module": [
@@ -765,7 +765,7 @@ var map = {
 		3
 	],
 	"../pages/signin/signin.module": [
-		861,
+		859,
 		2
 	],
 	"../pages/signup/signup.module": [
@@ -773,7 +773,7 @@ var map = {
 		1
 	],
 	"../pages/welcome/welcome.module": [
-		859,
+		861,
 		0
 	]
 };
@@ -894,15 +894,17 @@ var HomePage = /** @class */ (function () {
     };
     HomePage.prototype.onUnlock = function () {
         var _this = this;
-        this.nfc.addNdefListener(function () {
+        this.nfc.addNdefFormatableListener(function () {
             console.log('successfully attached ndef listener');
         }, function (err) {
             console.log('error attaching ndef listener', err);
         }).subscribe(function (event) {
             console.log('received ndef message. the tag contains: ', event.tag);
             console.log('decoded tag id', _this.nfc.bytesToHexString(event.tag.id));
-            var message = _this.ndef.textRecord(_this.userService.uId.publich_hash, "English", "Text");
-            _this.nfc.share([message]);
+            var message = _this.ndef.textRecord(_this.userService.uId.username, "English", "Text");
+            _this.nfc.write([message])
+                .then()
+                .catch();
         });
     };
     HomePage.prototype.onAddNewLock = function () {
@@ -921,7 +923,7 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\Users\markx_000\LockChain\frontend\LockChain\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-buttons>\n      <button ion-button icon-only menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-buttons end>\n        <button ion-button icon-only (click)="onAddNewLock()">\n          <ion-icon name="add"></ion-icon>\n        </button>\n      </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <h1 margin-top text-center >Welcome Back</h1>\n    <h3 class="hash" text-center border>public hash</h3>\n    <ion-grid>\n      <ion-row>\n        <ion-col text-center>\n          <button ion-button class="btn" (click)="onUnlock()">Unlock</button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n    <h3 text-center>Your Locks</h3>\n    <ion-buttons text-center>\n      <button ion-button text-center (click)="onLoadLocks()">Load Locks</button>\n    </ion-buttons>\n    <ion-list>\n      <button ion-item *ngFor="let lock of locks" (click)="onLoadLock(lock)">\n        <h2>{{lock.lock_name}}</h2>\n      </button>\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\Users\markx_000\LockChain\frontend\LockChain\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"C:\Users\markx_000\Lockchain2\LockChain\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-buttons>\n      <button ion-button icon-only menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-buttons end>\n        <button ion-button icon-only (click)="onAddNewLock()">\n          <ion-icon name="add"></ion-icon>\n        </button>\n      </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <h1 margin-top text-center >Welcome Back</h1>\n    <h3 class="hash" text-center border>public hash</h3>\n    <ion-grid>\n      <ion-row>\n        <ion-col text-center>\n          <button ion-button class="btn" (click)="onUnlock()">Unlock</button>\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n    <h3 text-center>Your Locks</h3>\n    <ion-buttons text-center>\n      <button ion-button text-center (click)="onLoadLocks()">Load Locks</button>\n    </ion-buttons>\n    <ion-list>\n      <button ion-item *ngFor="let lock of locks" (click)="onLoadLock(lock)">\n        <h2>{{lock.lock_name}}</h2>\n      </button>\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\Users\markx_000\Lockchain2\LockChain\src\pages\home\home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__services_locks__["a" /* LocksService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* PopoverController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_5__services_auth__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* ViewController */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_nfc__["a" /* NFC */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_nfc__["b" /* Ndef */], __WEBPACK_IMPORTED_MODULE_7__services_user__["a" /* UserService */]])
@@ -967,7 +969,7 @@ var AddNewLockPage = /** @class */ (function () {
     };
     AddNewLockPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-add-new-lock',template:/*ion-inline-start:"C:\Users\markx_000\LockChain\frontend\LockChain\src\pages\add-new-lock\add-new-lock.html"*/'<!--\n  Generated template for the AddNewLockPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>add-new-lock</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\markx_000\LockChain\frontend\LockChain\src\pages\add-new-lock\add-new-lock.html"*/,
+            selector: 'page-add-new-lock',template:/*ion-inline-start:"C:\Users\markx_000\Lockchain2\LockChain\src\pages\add-new-lock\add-new-lock.html"*/'<!--\n  Generated template for the AddNewLockPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>add-new-lock</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\markx_000\Lockchain2\LockChain\src\pages\add-new-lock\add-new-lock.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], AddNewLockPage);
@@ -1012,7 +1014,7 @@ var EditPermissionsPage = /** @class */ (function () {
     };
     EditPermissionsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-edit-permissions',template:/*ion-inline-start:"C:\Users\markx_000\LockChain\frontend\LockChain\src\pages\edit-permissions\edit-permissions.html"*/'<!--\n  Generated template for the EditPermissionsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>edit-permissions</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\markx_000\LockChain\frontend\LockChain\src\pages\edit-permissions\edit-permissions.html"*/,
+            selector: 'page-edit-permissions',template:/*ion-inline-start:"C:\Users\markx_000\Lockchain2\LockChain\src\pages\edit-permissions\edit-permissions.html"*/'<!--\n  Generated template for the EditPermissionsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>edit-permissions</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\markx_000\Lockchain2\LockChain\src\pages\edit-permissions\edit-permissions.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], EditPermissionsPage);
@@ -1112,15 +1114,15 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/add-new-lock/add-new-lock.module#AddNewLockPageModule', name: 'AddNewLockPage', segment: 'add-new-lock', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/add-lock/add-lock.module#AddLockPageModule', name: 'AddLockPage', segment: 'add-lock', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/edit-permissions/edit-permissions.module#EditPermissionsPageModule', name: 'EditPermissionsPage', segment: 'edit-permissions', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/add-new-lock/add-new-lock.module#AddNewLockPageModule', name: 'AddNewLockPage', segment: 'add-new-lock', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/add-user/add-user.module#AddUserPageModule', name: 'AddUserPage', segment: 'add-user', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/edit-lock/edit-lock.module#EditLockPageModule', name: 'EditLockPage', segment: 'edit-lock', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/edit-permissions/edit-permissions.module#EditPermissionsPageModule', name: 'EditPermissionsPage', segment: 'edit-permissions', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/remove-user/remove-user.module#RemoveUserPageModule', name: 'RemoveUserPage', segment: 'remove-user', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/signin/signin.module#SigninPageModule', name: 'SigninPage', segment: 'signin', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/signin/signin.module#SigninPageModule', name: 'SigninPage', segment: 'signin', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_10__angular_http__["c" /* HttpModule */]
@@ -1359,7 +1361,7 @@ var MyApp = /** @class */ (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\markx_000\LockChain\frontend\LockChain\src\app\app.html"*/'<ion-menu [content]="nav">\n    <ion-header *ngIf="isAuthenticated">\n        <ion-toolbar>\n            <ion-title>Menu</ion-title>\n        </ion-toolbar>\n    </ion-header>\n    <ion-content>\n        <ion-list>\n            <button ion-item icon-left (click)="onLogout()" *ngIf="isAuthenticated"><ion-icon name="log-out"></ion-icon>Logout</button>\n        </ion-list>\n    </ion-content>\n</ion-menu>\n<ion-nav [root]="rootPage" #nav></ion-nav>\n'/*ion-inline-end:"C:\Users\markx_000\LockChain\frontend\LockChain\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\markx_000\Lockchain2\LockChain\src\app\app.html"*/'<ion-menu [content]="nav">\n    <ion-header *ngIf="isAuthenticated">\n        <ion-toolbar>\n            <ion-title>Menu</ion-title>\n        </ion-toolbar>\n    </ion-header>\n    <ion-content>\n        <ion-list>\n            <button ion-item icon-left (click)="onLogout()" *ngIf="isAuthenticated"><ion-icon name="log-out"></ion-icon>Logout</button>\n        </ion-list>\n    </ion-content>\n</ion-menu>\n<ion-nav [root]="rootPage" #nav></ion-nav>\n'/*ion-inline-end:"C:\Users\markx_000\Lockchain2\LockChain\src\app\app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* MenuController */], __WEBPACK_IMPORTED_MODULE_9__services_auth__["a" /* AuthService */]])
     ], MyApp);
