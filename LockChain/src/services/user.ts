@@ -6,10 +6,9 @@ import { UserId } from '../models/uid';
 
 @Injectable()
 export class UserService{
-    public uId: UserId = new UserId('', '');
+    public uId: UserId = new UserId('', '', '');
     public uIds: UserId[] = [];
     constructor(private http: Http, private authService: AuthService){
-        
     }
     
     storeUsers(){
@@ -36,9 +35,10 @@ export class UserService{
             }
         )
     }
-    addNewUser(token: string, username: string, public_hash: string){
+    addNewUser(token: string, username: string, public_hash: string, cardId: string){
         this.uId.publich_hash = public_hash;
         this.uId.username = username;
+        this.uId.cardId = cardId;
         this.uIds.push(this.uId);
         const userID = this.authService.getActiveUser().uid;
         return this.http.put('https://lockchain-94649.firebaseio.com/' + userID + '/user.json?auth='+token, this.uId)

@@ -1,4 +1,4 @@
-#Sat Apr 21 11:34:30 EDT 2018
-base.0=C\:\\Users\\markx_000\\Lockchain2\\LockChain\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+#Sat Apr 21 19:54:58 EDT 2018
+base.0=C\:\\Users\\markx\\Documents\\LockChain2\\LockChain\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 renamed.0=classes.dex
-file.0=C\:\\Users\\markx_000\\Lockchain2\\LockChain\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex
+file.0=C\:\\Users\\markx\\Documents\\LockChain2\\LockChain\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex

@@ -14,7 +14,7 @@ import { AuthService } from '../../services/auth';
 })
 export class EditLockPage implements OnInit {
   lock: Lock;
-  url: string  = 'https://pacific-lowlands-92963.herokuapp.com';
+  url: string  = 'http://192.168.1.11:5000';
   headers = new Headers({ 'Content-Type': 'application/json' });
   options = new RequestOptions({ headers: this.headers });
   constructor(public navCtrl: NavController, 

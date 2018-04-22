@@ -15,9 +15,9 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 export class AddLockPage implements OnInit{
   lockForm: FormGroup;
   lock: Lock;
-  url: string  = 'https://pacific-lowlands-92963.herokuapp.com';
-  headers = new Headers({ 'Content-Type': 'application/json' });
-  options = new RequestOptions({ headers: this.headers });
+  url: string  = 'http://192.168.1.11:5000';
+  headers: Headers = new Headers({ 'Content-Type': 'application/json' });
+  options: RequestOptions = new RequestOptions({ headers: this.headers });
   constructor(public navCtrl: NavController, 
               public navParams: NavParams, 
               public actionSheetCtrl: ActionSheetController, 
@@ -48,7 +48,7 @@ export class AddLockPage implements OnInit{
             "lock_public_hash": value.public_hash,
             "lock_private_hash": value.private_hash,
             "remove": false  
-          },
+          } ,
           this.options)
             .subscribe((res: Response) => {
               console.log(res.json());

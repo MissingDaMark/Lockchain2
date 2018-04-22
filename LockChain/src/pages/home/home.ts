@@ -8,6 +8,7 @@ import { AuthService } from '../../services/auth';
 import { Lock } from '../../models/lock';
 import { EditLockPage } from '../edit-lock/edit-lock';
 import { UserService } from '../../services/user';
+import { UserId } from '../../models/uid';
 
 @Component({
   selector: 'page-home',
@@ -16,10 +17,10 @@ import { UserService } from '../../services/user';
 
 export class HomePage {
   locks: Lock[] = [];
-  
+  uid: UserId;
   constructor(public navCtrl: NavController, public navParams: NavParams, public locksService: LocksService, private popoverCtrl: PopoverController, private loadingCtrl: LoadingController,
     private alertCtrl: AlertController, private authService: AuthService, private viewCtrl: ViewController, private nfc: NFC, private ndef: Ndef, private userService: UserService) {
-    
+      
   }
 
   onLoadLocks(){

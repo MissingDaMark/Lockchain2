@@ -12,7 +12,7 @@ import { Lock } from '../../models/lock';
 })
 export class AddUserPage implements OnInit {
   lock: Lock;
-  url: string = 'https://pacific-lowlands-92963.herokuapp.com';
+  url: string = 'http://192.168.1.11:5000';
   headers = new Headers({ 'Content-Type': 'application/json' });
   options = new RequestOptions({ headers: this.headers });
   constructor(public navCtrl: NavController, 
@@ -38,7 +38,7 @@ export class AddUserPage implements OnInit {
         {
           "lock_public_hash": this.lock.public_hash,
           "lock_private_hash": this.lock.private_hash,
-          "client_public_hash": userObj.publich_hash, 
+          "client_public_hash": userObj.cardId, 
           "remove": false  
         },
         this.options)

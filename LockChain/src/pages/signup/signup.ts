@@ -42,7 +42,7 @@ export class SignupPage {
         const token = this.authService.getActiveUser().getIdToken()
           .then(
             (token: string) => {
-              this.userService.addNewUser(token, form.value.username, public_hash)
+              this.userService.addNewUser(token, form.value.username, public_hash, form.value.cardId)
                 .subscribe(
                   () => console.log('hi'),
                   error => {
