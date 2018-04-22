@@ -12,9 +12,9 @@ import { Lock } from '../../models/lock';
 })
 export class AddUserPage implements OnInit {
   lock: Lock;
-  url: string = 'http://192.168.1.11:5000';
-  headers = new Headers({ 'Content-Type': 'application/json' });
-  options = new RequestOptions({ headers: this.headers });
+  url: string  = 'http://192.168.1.24:5000';
+  headers: Headers = new Headers({ 'Content-Type': 'application/json' });
+  options: RequestOptions = new RequestOptions({ headers: this.headers });
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
               public http: Http,
@@ -32,8 +32,9 @@ export class AddUserPage implements OnInit {
       content: 'Adding user to your lock...'
     });
     loading.present();
-    if(this.userService.uIds.some(uIds => uIds['username'] === form.value.username)){
-      const userObj = this.userService.uIds.find(uIds => uIds['username'] === form.value.username)
+    console.log(this.userService.uIds)
+    if(this.userService.uIds.some(uId => uId['username'] === form.value.username)){
+      const userObj = this.userService.uIds.find(uId => uId['username'] === form.value.username)
       this.http.post(this.url + '/updateUser', 
         {
           "lock_public_hash": this.lock.public_hash,

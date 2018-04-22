@@ -26,19 +26,7 @@ export class SigninPage {
     loading.present();
     this.authService.signin(form.value.email, form.value.password)
       .then(data => {
-        this.authService.getActiveUser().getToken()
-        .then(
-          (token: string) => {
-            this.usersService.getReturingUser(token)
-            .subscribe( 
-              () => loading.dismiss(),
-              error => {
-                loading.dismiss();
-                this.handleError(error.message);
-              }
-            );  
-          }
-      )
+        loading.dismiss();
     }
   )
       .catch(error => {

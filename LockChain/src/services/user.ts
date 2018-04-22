@@ -56,8 +56,10 @@ export class UserService{
             })
             .do(
                 (user: UserId) => {
+                    console.log(user);
                     if(user){
                         this.uId = user;
+                        console.log(this.uId);
                     }
                 }
             )

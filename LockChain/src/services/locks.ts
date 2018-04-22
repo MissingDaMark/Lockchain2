@@ -8,7 +8,7 @@ import { AlertController, LoadingController } from 'ionic-angular';
 
 @Injectable()
 export class LocksService{
-    private locks: Lock[] = [];    
+    public locks: Lock[] = [];    
     constructor(private http: Http, private authService: AuthService, private alertCtrl: AlertController, private loadingCtrl: LoadingController){
 
     }
@@ -58,7 +58,6 @@ export class LocksService{
                     }
                 }
             )
-
     }
 
     private handleError(errorMessage: string){

@@ -5,6 +5,7 @@ import { Lock } from '../../models/lock';
 import { AuthService } from '../../services/auth';
 import { LocksService } from '../../services/locks';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
+import { UserService } from '../../services/user';
 
 
 @IonicPage()
@@ -15,7 +16,7 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 export class AddLockPage implements OnInit{
   lockForm: FormGroup;
   lock: Lock;
-  url: string  = 'http://192.168.1.11:5000';
+  url: string  = 'http://192.168.1.24:5000';
   headers: Headers = new Headers({ 'Content-Type': 'application/json' });
   options: RequestOptions = new RequestOptions({ headers: this.headers });
   constructor(public navCtrl: NavController, 
@@ -26,7 +27,8 @@ export class AddLockPage implements OnInit{
               public authService: AuthService,
               public locksService: LocksService,
               public loadingCtrl: LoadingController,
-              public http: Http) {
+              public http: Http,
+              public userService: UserService) {
   }
 
   ngOnInit(){
@@ -50,8 +52,8 @@ export class AddLockPage implements OnInit{
             "remove": false  
           } ,
           this.options)
-            .subscribe((res: Response) => {
-              console.log(res.json());
+            .subscribe((data: any) => {
+              console.log(data);
           });
           this.locksService.storeLocks(token)
             .subscribe( 

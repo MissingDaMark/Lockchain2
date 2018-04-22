@@ -14,9 +14,9 @@ import { AuthService } from '../../services/auth';
 })
 export class EditLockPage implements OnInit {
   lock: Lock;
-  url: string  = 'http://192.168.1.11:5000';
-  headers = new Headers({ 'Content-Type': 'application/json' });
-  options = new RequestOptions({ headers: this.headers });
+  url: string  = 'http://192.168.1.24:5000';
+  headers: Headers = new Headers({ 'Content-Type': 'application/json' });
+  options: RequestOptions = new RequestOptions({ headers: this.headers });
   constructor(public navCtrl: NavController, 
               public navParams: NavParams, 
               public http: Http, 
@@ -46,15 +46,16 @@ export class EditLockPage implements OnInit {
     this.authService.getActiveUser().getToken()
       .then(
         (token: string) => {
+          console.log(this.lock);
           this.http.post(this.url + '/updateLock', 
           {
-            "lock_public_haxsh": this.lock.public_hash,
+            "lock_public_hash": this.lock.public_hash,
             "lock_private_hash": this.lock.private_hash,
             "remove": true  
           },  
           this.options)
-            .subscribe((res: Response) => {
-              console.log(res.json());
+          .subscribe((data: any) => {
+            console.log(data);
           });
           this.locksService.removeLock(this.lock.lock_name);
           this.locksService.storeLocks(token)
@@ -63,8 +64,8 @@ export class EditLockPage implements OnInit {
               error => {
                 loading.dismiss();
                 this.handleError(error.message);
-          }
-        );
+              }
+          );
         }
       )
       .catch();

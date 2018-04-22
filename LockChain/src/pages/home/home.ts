@@ -9,6 +9,7 @@ import { Lock } from '../../models/lock';
 import { EditLockPage } from '../edit-lock/edit-lock';
 import { UserService } from '../../services/user';
 import { UserId } from '../../models/uid';
+import { User } from 'firebase';
 
 @Component({
   selector: 'page-home',
@@ -16,11 +17,17 @@ import { UserId } from '../../models/uid';
 })
 
 export class HomePage {
-  locks: Lock[] = [];
+  locks: Lock[] = [];  
   uid: UserId;
   constructor(public navCtrl: NavController, public navParams: NavParams, public locksService: LocksService, private popoverCtrl: PopoverController, private loadingCtrl: LoadingController,
     private alertCtrl: AlertController, private authService: AuthService, private viewCtrl: ViewController, private nfc: NFC, private ndef: Ndef, private userService: UserService) {
-      
+      this.uid = this.userService.uId;
+      console.log(this.userService.uId)
+  }
+
+  ionViewWillEnter (){
+    this.userService.getUsers()
+      .subscribe();
   }
 
   onLoadLocks(){

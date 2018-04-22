@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Platform, NavController, MenuController } from 'ionic-angular';
+import { Platform, NavController, MenuController, AlertController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -9,6 +9,7 @@ import { SignupPage } from '../pages/signup/signup';
 import { WelcomePage } from '../pages/welcome/welcome';
 import firebase from 'firebase';
 import { AuthService } from '../services/auth';
+import { UserService } from '../services/user';
 
 
 @Component({
@@ -22,7 +23,7 @@ export class MyApp {
   isAuthenticated = false;
   @ViewChild('nav') nav: NavController;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public menuCtrl: MenuController, private authService: AuthService) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public menuCtrl: MenuController, private authService: AuthService, private usersService: UserService, private alertCtrl: AlertController) {
 
     firebase.initializeApp({
       apiKey: "AIzaSyCrMN5AAX4wZRDVhxDz6L-Xq_RyCfExQIU",
@@ -31,6 +32,24 @@ export class MyApp {
     firebase.auth().onAuthStateChanged(user => {
       if(user){
         this.isAuthenticated = true;
+        this.authService.getActiveUser().getToken()
+        .then(
+          (token: string) => {
+            this.usersService.getReturingUser(token)
+            .subscribe( 
+              () => {},
+              error => {
+                this.handleError(error.message);
+              }
+            );  
+            console.log(this.usersService.uId);
+            this.usersService.getUsers()
+              .subscribe(
+                () => 
+                console.log(this.usersService.uIds)
+              );
+          }
+      )
         this.rootPage = HomePage;
       }else{
         this.isAuthenticated = false;
@@ -54,6 +73,15 @@ export class MyApp {
     this.authService.logout();
     this.menuCtrl.close();
     this.nav.setRoot(SigninPage);
+  }
+
+  private handleError(errorMessage: string){
+    const alert = this.alertCtrl.create({
+      title: 'An error occured loading your locks!',
+      message: errorMessage,
+      buttons: ['Ok']
+    });
+    alert.present();
   }
 }
 
