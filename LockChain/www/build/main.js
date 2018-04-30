@@ -319,7 +319,7 @@ var AddLockPage = /** @class */ (function () {
         this.loadingCtrl = loadingCtrl;
         this.http = http;
         this.userService = userService;
-        this.url = 'http://192.168.1.24:5000';
+        this.url = 'http://192.168.1.75:5000';
         this.headers = new __WEBPACK_IMPORTED_MODULE_5__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
         this.options = new __WEBPACK_IMPORTED_MODULE_5__angular_http__["d" /* RequestOptions */]({ headers: this.headers });
     }
@@ -424,7 +424,7 @@ var AddUserPage = /** @class */ (function () {
         this.userService = userService;
         this.loadingCtrl = loadingCtrl;
         this.alertCtrl = alertCtrl;
-        this.url = 'http://192.168.1.24:5000';
+        this.url = 'http://192.168.1.75:5000';
         this.headers = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
         this.options = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* RequestOptions */]({ headers: this.headers });
     }
@@ -519,7 +519,7 @@ var EditLockPage = /** @class */ (function () {
         this.authService = authService;
         this.loadingCtrl = loadingCtrl;
         this.alertCtrl = alertCtrl;
-        this.url = 'http://192.168.1.24:5000';
+        this.url = 'http://192.168.1.75:5000';
         this.headers = new __WEBPACK_IMPORTED_MODULE_4__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
         this.options = new __WEBPACK_IMPORTED_MODULE_4__angular_http__["d" /* RequestOptions */]({ headers: this.headers });
     }
@@ -616,7 +616,7 @@ var RemoveUserPage = /** @class */ (function () {
         this.userService = userService;
         this.loadingCtrl = loadingCtrl;
         this.alertCtrl = alertCtrl;
-        this.url = 'http://192.168.1.24:5000';
+        this.url = 'http://192.168.1.75:5000';
         this.headers = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
         this.options = new __WEBPACK_IMPORTED_MODULE_2__angular_http__["d" /* RequestOptions */]({ headers: this.headers });
     }
@@ -741,39 +741,39 @@ webpackEmptyAsyncContext.id = 212;
 
 var map = {
 	"../pages/add-lock/add-lock.module": [
-		854,
+		853,
 		8
 	],
 	"../pages/add-new-lock/add-new-lock.module": [
-		853,
+		858,
 		7
 	],
 	"../pages/add-user/add-user.module": [
-		855,
+		854,
 		6
 	],
 	"../pages/edit-lock/edit-lock.module": [
-		856,
+		855,
 		5
 	],
 	"../pages/edit-permissions/edit-permissions.module": [
-		857,
+		856,
 		4
 	],
 	"../pages/remove-user/remove-user.module": [
-		858,
+		857,
 		3
 	],
 	"../pages/signin/signin.module": [
-		859,
+		860,
 		2
 	],
 	"../pages/signup/signup.module": [
-		860,
+		861,
 		1
 	],
 	"../pages/welcome/welcome.module": [
-		861,
+		859,
 		0
 	]
 };
@@ -945,51 +945,6 @@ var HomePage = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddNewLockPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-/**
- * Generated class for the AddNewLockPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var AddNewLockPage = /** @class */ (function () {
-    function AddNewLockPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-    }
-    AddNewLockPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad AddNewLockPage');
-    };
-    AddNewLockPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-add-new-lock',template:/*ion-inline-start:"C:\Users\markx_000\Lockchain2\LockChain\src\pages\add-new-lock\add-new-lock.html"*/'<!--\n  Generated template for the AddNewLockPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>add-new-lock</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\markx_000\Lockchain2\LockChain\src\pages\add-new-lock\add-new-lock.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
-    ], AddNewLockPage);
-    return AddNewLockPage;
-}());
-
-//# sourceMappingURL=add-new-lock.js.map
-
-/***/ }),
-
-/***/ 436:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditPermissionsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
@@ -1031,6 +986,51 @@ var EditPermissionsPage = /** @class */ (function () {
 
 /***/ }),
 
+/***/ 436:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddNewLockPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the AddNewLockPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var AddNewLockPage = /** @class */ (function () {
+    function AddNewLockPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    AddNewLockPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad AddNewLockPage');
+    };
+    AddNewLockPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-add-new-lock',template:/*ion-inline-start:"C:\Users\markx_000\Lockchain2\LockChain\src\pages\add-new-lock\add-new-lock.html"*/'<!--\n  Generated template for the AddNewLockPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>add-new-lock</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\markx_000\Lockchain2\LockChain\src\pages\add-new-lock\add-new-lock.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
+    ], AddNewLockPage);
+    return AddNewLockPage;
+}());
+
+//# sourceMappingURL=add-new-lock.js.map
+
+/***/ }),
+
 /***/ 437:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1059,14 +1059,14 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(433);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_signin_signin__ = __webpack_require__(117);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_signup_signup__ = __webpack_require__(118);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_add_new_lock_add_new_lock__ = __webpack_require__(435);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_add_new_lock_add_new_lock__ = __webpack_require__(436);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_http__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_auth__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_welcome_welcome__ = __webpack_require__(201);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_add_lock_add_lock__ = __webpack_require__(197);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_locks__ = __webpack_require__(104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_edit_lock_edit_lock__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_edit_permissions_edit_permissions__ = __webpack_require__(436);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_edit_permissions_edit_permissions__ = __webpack_require__(435);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_user__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__ionic_native_nfc__ = __webpack_require__(434);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_add_user_add_user__ = __webpack_require__(198);
@@ -1120,15 +1120,15 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/add-new-lock/add-new-lock.module#AddNewLockPageModule', name: 'AddNewLockPage', segment: 'add-new-lock', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/add-lock/add-lock.module#AddLockPageModule', name: 'AddLockPage', segment: 'add-lock', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/add-user/add-user.module#AddUserPageModule', name: 'AddUserPage', segment: 'add-user', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/edit-lock/edit-lock.module#EditLockPageModule', name: 'EditLockPage', segment: 'edit-lock', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/edit-permissions/edit-permissions.module#EditPermissionsPageModule', name: 'EditPermissionsPage', segment: 'edit-permissions', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/remove-user/remove-user.module#RemoveUserPageModule', name: 'RemoveUserPage', segment: 'remove-user', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/add-new-lock/add-new-lock.module#AddNewLockPageModule', name: 'AddNewLockPage', segment: 'add-new-lock', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/signin/signin.module#SigninPageModule', name: 'SigninPage', segment: 'signin', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_10__angular_http__["c" /* HttpModule */]

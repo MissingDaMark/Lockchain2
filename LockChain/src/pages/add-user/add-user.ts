@@ -12,7 +12,7 @@ import { Lock } from '../../models/lock';
 })
 export class AddUserPage implements OnInit {
   lock: Lock;
-  url: string  = 'http://192.168.1.24:5000';
+  url: string  = 'http://192.168.1.75:5000';
   headers: Headers = new Headers({ 'Content-Type': 'application/json' });
   options: RequestOptions = new RequestOptions({ headers: this.headers });
   constructor(public navCtrl: NavController, 
